@@ -4,4 +4,9 @@ const nextConfig = {
     swcMinify: true,
 };
 
-module.exports = nextConfig;
+module.exports = {
+    nextConfig,
+    env: {
+        DATOCMS_API_TOKEN: "949a6d3042f4035b35f2f0631e3fb3",
+    },
+};
