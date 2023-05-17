@@ -26,25 +26,19 @@ const Nav = () => {
                 className="group lg:hidden bg-gray-100 shadow-md p-2.5 transition-colors duration-200 z-50 rounded-lg"
             >
                 <div
-                    className={
-                        !showMenu
-                            ? "w-5 h-1 transition-all duration-200 bg-gray-600 m-1 rounded-lg"
-                            : "w-5 h-1 transition-all duration-200 bg-gray-600 m-1 translate-y-2 rotate-45 rounded-lg"
-                    }
+                    className={`w-5 h-1 transition-all duration-200 bg-gray-600 m-1 rounded-lg ${
+                        showMenu ? "translate-y-2 rotate-45" : ""
+                    }`}
                 />
                 <div
-                    className={
-                        !showMenu
-                            ? "w-3 h-1 transition-all duration-200 bg-gray-600 m-1 rounded-lg"
-                            : "w-3 h-1 transition-all duration-200 bg-gray-600 m-1 opacity-0"
-                    }
+                    className={`w-3 h-1 transition-all duration-200 bg-gray-600 m-1 rounded-lg ${
+                        showMenu ? "opacity-0" : ""
+                    }`}
                 />
                 <div
-                    className={
-                        !showMenu
-                            ? "w-5 h-1 transition-all duration-200 bg-gray-600 m-1 rounded-lg"
-                            : "w-5 h-1 transition-all duration-200 bg-gray-600 m-1 -translate-y-2 -rotate-45 rounded-lg"
-                    }
+                    className={`w-5 h-1 transition-all duration-200 bg-gray-600 m-1 rounded-lg ${
+                        showMenu ? "-translate-y-2 -rotate-45" : ""
+                    }`}
                 />
             </button>
             <ul
@@ -54,13 +48,27 @@ const Nav = () => {
                         : "absolute transition-transform translate-x-0 duration-200 top-0 left-0 w-full h-full opacity-100 bg-gray-200 flex-center flex-col space-y-2 shadow-lg font-bold"
                 }
             >
-                <Link href="/" className="p-3">Home</Link>
-                <Link href="/" className="p-3">Usługi</Link>
-                <Link href="/" className="p-3">Projekty</Link>
-                <Link href="/" className="p-3">Projekty</Link>
-                <Link href="/" className="p-3">Projekty</Link>
-                <Link href="/" className="p-3">Kontakt</Link>
-                <Link href="/" className="p-3">Darmowa Wycena</Link>
+                <Link href="/" label="Strona Główna" className="p-3">
+                    Home
+                </Link>
+                <Link href="/" label="Usługi" className="p-3">
+                    Usługi
+                </Link>
+                <Link href="/" label="Projekty" className="p-3">
+                    Projekty
+                </Link>
+                <Link href="/" label="Projekty" className="p-3">
+                    Projekty
+                </Link>
+                <Link href="/" label="Projekty" className="p-3">
+                    Projekty
+                </Link>
+                <Link href="/" label="Kontakt" className="p-3">
+                    Kontakt
+                </Link>
+                <Link href="/" label="Darmowa Wycena" className="p-3">
+                    Darmowa Wycena
+                </Link>
             </ul>
         </nav>
     );
