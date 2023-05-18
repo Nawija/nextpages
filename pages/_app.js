@@ -1,4 +1,3 @@
-import { fetchAPI } from "../lib/ssr_Dato";
 import "../styles/global.css";
 import Nav from "../components/Nav";
 
@@ -9,21 +8,4 @@ export default function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
         </main>
     );
-}
-
-export async function getServerSideProps() {
-    const data = await fetchAPI(`
-    query {
-      allPoradniks {
-        id
-        title
-      }
-    }
-  `);
-
-    return {
-        props: {
-            posts: data.allPoradniks,
-        },
-    };
 }
