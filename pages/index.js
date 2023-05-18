@@ -1,6 +1,25 @@
 import { fetchAPI } from "../lib/ssr_Dato";
 import Image from "next/image";
 
+export async function getServerSideProps() {
+    const data = await fetchAPI(`
+    query {
+      allPoradniks {
+        id
+        title
+        img {
+            url
+          }
+      }
+    }
+  `);
+    return {
+        props: {
+            posts: data.allPoradniks,
+        },
+    };
+}
+
 export default function Home({ posts }) {
     return (
         <main className="flex-center flex-col">
@@ -22,23 +41,4 @@ export default function Home({ posts }) {
             </ul>
         </main>
     );
-}
-
-export async function getServerSideProps() {
-    const data = await fetchAPI(`
-    query {
-      allPoradniks {
-        id
-        title
-        img {
-            url
-          }
-      }
-    }
-  `);
-    return {
-        props: {
-            posts: data.allPoradniks,
-        },
-    };
 }
