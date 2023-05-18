@@ -5,7 +5,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <title>Tytuł Twojej strony</title>
+                    <title>Seovileo</title>
                     <meta name="description" content="Opis Twojej strony" />
                     <meta
                         name="keywords"
@@ -19,7 +19,7 @@ class MyDocument extends Document {
                     <link
                         rel="icon"
                         type="image/png"
-                        href="../public/assets/favicon.png"
+                        href="/assets/favicon.png"
                     />
 
                     <meta name="robots" content="index, follow" />
