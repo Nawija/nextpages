@@ -48,27 +48,37 @@ const Nav = () => {
                         : "absolute transition-transform translate-x-0 duration-200 top-0 left-0 w-full h-full opacity-100 bg-gray-200 flex-center flex-col space-y-2 shadow-lg font-bold"
                 }
             >
-                <Link href="/" label="Strona Główna" className="p-3">
-                    Home
-                </Link>
-                <Link href="/" label="Usługi" className="p-3">
-                    Usługi
-                </Link>
-                <Link href="/" label="Projekty" className="p-3">
-                    Projekty
-                </Link>
-                <Link href="/" label="Projekty" className="p-3">
-                    Projekty
-                </Link>
-                <Link href="/" label="Projekty" className="p-3">
-                    Projekty
-                </Link>
-                <Link href="/" label="Kontakt" className="p-3">
-                    Kontakt
-                </Link>
-                <Link href="/" label="Darmowa Wycena" className="p-3">
-                    Darmowa Wycena
-                </Link>
+                <li>
+                    <Link href="/" label="Strona Główna" className="p-3">
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/" label="Usługi" className="p-3">
+                        Usługi
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/" label="Projekty" className="p-3">
+                        Projekty
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/" label="Projekty" className="p-3">
+                        Projekty
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/" label="Kontakt" className="p-3">
+                        Kontakt
+                    </Link>
+                </li>
+                <li>
+                    {" "}
+                    <Link href="/" label="Darmowa Wycena" className="p-3">
+                        Darmowa Wycena
+                    </Link>
+                </li>
             </ul>
         </nav>
     );

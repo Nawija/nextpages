@@ -26,30 +26,28 @@ export default function Home({ posts }) {
             <h1 className="orange_gradient text-4xl mb-12">
                 Lista postów z DataCMS:
             </h1>
-            <ul>
-                {posts.map((post, index) => (
-                    <div key={post.id}>
-                        <p>{post.title}</p>
-                        {index < 2 ? (
-                            <Image
-                                src={post.img.url}
-                                width={500}
-                                height={500}
-                                alt={post.title}
-                                loading="eager"
-                            />
-                        ) : (
-                            <Image
-                                src={post.img.url}
-                                width={500}
-                                height={500}
-                                alt={post.title}
-                                loading="lazy"
-                            />
-                        )}
-                    </div>
-                ))}
-            </ul>
+            {posts.map((post, index) => (
+                <div key={post.id}>
+                    <p>{post.title}</p>
+                    {index < 2 ? (
+                        <Image
+                            src={post.img.url}
+                            width={500}
+                            height={500}
+                            alt={post.title}
+                            loading="eager"
+                        />
+                    ) : (
+                        <Image
+                            src={post.img.url}
+                            width={500}
+                            height={500}
+                            alt={post.title}
+                            loading="lazy"
+                        />
+                    )}
+                </div>
+            ))}
         </main>
     );
 }
