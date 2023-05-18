@@ -27,15 +27,26 @@ export default function Home({ posts }) {
                 Lista postów z DataCMS:
             </h1>
             <ul>
-                {posts.map((post) => (
+                {posts.map((post, index) => (
                     <div key={post.id}>
                         <p>{post.title}</p>
-                        <Image
-                            src={post.img.url}
-                            width={500}
-                            height={500}
-                            alt={post.title}
-                        />
+                        {index < 2 ? (
+                            <Image
+                                src={post.img.url}
+                                width={500}
+                                height={500}
+                                alt={post.title}
+                                loading="eager"
+                            />
+                        ) : (
+                            <Image
+                                src={post.img.url}
+                                width={500}
+                                height={500}
+                                alt={post.title}
+                                loading="lazy"
+                            />
+                        )}
                     </div>
                 ))}
             </ul>
