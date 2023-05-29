@@ -16,7 +16,7 @@ const Nav = () => {
                     height={50}
                     className="object-contain"
                 />
-                <p className="font-satoshi font-semibold text-lg text-gray-700 -tracking-wide">
+                <p className="font-semibold text-lg text-gray-700 -tracking-wide">
                     Seovileo
                 </p>
             </Link>
